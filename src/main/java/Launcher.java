@@ -13,13 +13,16 @@ class Launcher {
                 Arrays.asList("Alpha", "Beta", "Gamma", "Delta",
                         "Epsilon","sdfsdfsd","rewrwer","32432423","asfdasdas","asdasdasd","sdfsdfsdfsdf","sdfsdfsdfsdfsdfsdfsdf","sdfsdf");
 
-        ConnectableObservable<String> myStrings = Observable.fromIterable(items).publish();
+        //Observable<String> myStrings = Observable.fromIterable(items);
+        Observable.range(1,items.size()).subscribe(System.out::println);
+
+        /*ConnectableObservable<String> myStrings = Observable.fromIterable(items).publish();
 
         myStrings.map(String::length).filter(i->i>5).subscribe((System.out::println),
                 Throwable::printStackTrace);
         myStrings.subscribe(s->System.out.println(s));
 
-        myStrings.connect();
+        myStrings.connect();*/
 
         //myStrings.subscribe(System.out::println);
         //myStrings.map(String::length).subscribe(System.out::println);;
