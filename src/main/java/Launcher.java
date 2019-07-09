@@ -5,16 +5,21 @@ import io.reactivex.observables.ConnectableObservable;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 class Launcher {
     public static void main(String args[]){
 
-        List<String> items =
+        Observable.interval(1,TimeUnit.SECONDS)
+                .subscribe(System.out::println);
+
+        sleepNow(5000);
+        /*List<String> items =
                 Arrays.asList("Alpha", "Beta", "Gamma", "Delta",
-                        "Epsilon","sdfsdfsd","rewrwer","32432423","asfdasdas","asdasdasd","sdfsdfsdfsdf","sdfsdfsdfsdfsdfsdfsdf","sdfsdf");
+                        "Epsilon","sdfsdfsd","rewrwer","32432423","asfdasdas","asdasdasd","sdfsdfsdfsdf","sdfsdfsdfsdfsdfsdfsdf","sdfsdf");*/
 
         //Observable<String> myStrings = Observable.fromIterable(items);
-        Observable.range(1,items.size()).subscribe(System.out::println);
+        //Observable.range(1,items.size()).subscribe(System.out::println);
 
         /*ConnectableObservable<String> myStrings = Observable.fromIterable(items).publish();
 
@@ -56,5 +61,13 @@ class Launcher {
                 Throwable::printStackTrace,
                 ()->System.out.println("Completed"));*/
         //myStrings.map(String::length).filter(i->i>5).subscribe((System.out::println));
+    }
+
+    private static void sleepNow(int milliSesonds){
+        try {
+            Thread.sleep(milliSesonds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
