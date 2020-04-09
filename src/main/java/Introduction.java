@@ -51,7 +51,6 @@ class Examples{
                     emitter.onComplete();
                 }
         );
-        Observable<String> data = source.filter(dataLength->dataLength.length()==3);
-        data.subscribe(System.out::println);
+        source.filter(dataLength->dataLength.length()==3).subscribe(System.out::println);
     }
 }
