@@ -10,14 +10,15 @@ class Introduction {
     public static void main(String args[]) {
         Examples examples = new Examples();
         //examples.firstExample();
-        examples.secondExample();
+        //examples.secondExample();
+        examples.thirdExample();
     }
 
 
 }
 
-class Examples{
-    void firstExample(){
+class Examples {
+    void firstExample() {
         Observable<String> source = Observable.create(emitter ->
                 {
                     emitter.onNext("1");
@@ -33,9 +34,10 @@ class Examples{
                     emitter.onComplete();
                 }
         );
-        source.subscribe(data->System.out.println(data));
+        source.subscribe(data -> System.out.println(data));
     }
-    void secondExample(){
+
+    void secondExample() {
         Observable<String> source = Observable.create(emitter ->
                 {
                     emitter.onNext("one");
@@ -51,6 +53,20 @@ class Examples{
                     emitter.onComplete();
                 }
         );
-        source.filter(dataLength->dataLength.length()==3).subscribe(System.out::println);
+        source.filter(dataLength -> dataLength.length() == 3).subscribe(System.out::println);
+    }
+
+    void thirdExample() {
+        Observable<String> source = Observable.just("one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten");
+        source.filter(dataLength -> dataLength.length() == 3).subscribe(System.out::println);
     }
 }
