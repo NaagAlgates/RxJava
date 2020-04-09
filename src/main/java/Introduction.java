@@ -9,7 +9,8 @@ import io.reactivex.Observable;
 class Introduction {
     public static void main(String args[]) {
         Examples examples = new Examples();
-        examples.firstExample();
+        //examples.firstExample();
+        examples.secondExample();
     }
 
 
@@ -29,8 +30,28 @@ class Examples{
                     emitter.onNext("8");
                     emitter.onNext("9");
                     emitter.onNext("10");
+                    emitter.onComplete();
                 }
         );
         source.subscribe(data->System.out.println(data));
+    }
+    void secondExample(){
+        Observable<String> source = Observable.create(emitter ->
+                {
+                    emitter.onNext("one");
+                    emitter.onNext("two");
+                    emitter.onNext("three");
+                    emitter.onNext("four");
+                    emitter.onNext("five");
+                    emitter.onNext("six");
+                    emitter.onNext("seven");
+                    emitter.onNext("eight");
+                    emitter.onNext("nine");
+                    emitter.onNext("ten");
+                    emitter.onComplete();
+                }
+        );
+        Observable<String> data = source.filter(dataLength->dataLength.length()==3);
+        data.subscribe(System.out::println);
     }
 }
