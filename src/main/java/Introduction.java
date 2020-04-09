@@ -5,20 +5,30 @@ to signal completion and communicate that there will be no more items.
 */
 
 import io.reactivex.Observable;
+import org.graalvm.compiler.replacements.Log;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.logging.Logger;
 
 class Introduction {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Examples examples = new Examples();
         //examples.firstExample();
         //examples.secondExample();
-        examples.thirdExample();
+        //examples.thirdExample();
+        examples.fourthExample();
     }
-
-
 }
 
+
+
 class Examples {
+    static void Log(String data){
+        System.out.println(data);
+    }
     void firstExample() {
+        Log("firstExample");
         Observable<String> source = Observable.create(emitter ->
                 {
                     emitter.onNext("1");
@@ -38,6 +48,7 @@ class Examples {
     }
 
     void secondExample() {
+        Log("secondExample");
         Observable<String> source = Observable.create(emitter ->
                 {
                     emitter.onNext("one");
@@ -57,6 +68,7 @@ class Examples {
     }
 
     void thirdExample() {
+        Log("thirdExample");
         Observable<String> source = Observable.just("one",
                 "two",
                 "three",
@@ -68,5 +80,21 @@ class Examples {
                 "nine",
                 "ten");
         source.filter(dataLength -> dataLength.length() == 3).subscribe(System.out::println);
+    }
+
+    void fourthExample(){
+        Log("fourthExample");
+        List<String> stringList = Arrays.asList("one",
+                "two",
+                "three",
+                "four",
+                "five",
+                "six",
+                "seven",
+                "eight",
+                "nine",
+                "ten");
+        Observable<String> stringObservable = Observable.fromIterable(stringList);
+        stringObservable.filter(dataLength -> dataLength.length() == 3).subscribe(System.out::println);
     }
 }
