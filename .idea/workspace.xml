@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a577486-38d6-423e-bb0b-0103be916742" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
@@ -76,22 +75,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="285" key="GridCell.Tab.0.bottom" timestamp="1586472748431">
+    <state x="533" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1586473531497">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="285" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1586472748431" />
-    <state width="1398" height="285" key="GridCell.Tab.0.center" timestamp="1586472748429">
+    <state x="533" y="178" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1586473531497" />
+    <state width="1398" height="180" key="GridCell.Tab.0.bottom" timestamp="1586486974451">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="285" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1586472748429" />
-    <state width="1398" height="285" key="GridCell.Tab.0.left" timestamp="1586472748429">
+    <state width="1398" height="180" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1586486974451" />
+    <state width="1398" height="180" key="GridCell.Tab.0.center" timestamp="1586486974450">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="285" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1586472748429" />
-    <state width="1398" height="285" key="GridCell.Tab.0.right" timestamp="1586472748430">
+    <state width="1398" height="180" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1586486974450" />
+    <state width="1398" height="180" key="GridCell.Tab.0.left" timestamp="1586486974449">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="285" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1586472748430" />
+    <state width="1398" height="180" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1586486974449" />
+    <state width="1398" height="180" key="GridCell.Tab.0.right" timestamp="1586486974450">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="180" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1586486974450" />
     <state x="397" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1586396551855">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
