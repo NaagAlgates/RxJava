@@ -1,4 +1,4 @@
-/*
+package introduction;/*
 The Observable.create() factory allows us to create an Observable by providing a lambda receiving an Observable emitter.
 We can call the Observable emitter's onNext() method to pass emissions (one a time) up the chain as well as onComplete()
 to signal completion and communicate that there will be no more items.
@@ -10,10 +10,8 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.observables.ConnectableObservable;
 import io.reactivex.observers.ResourceObserver;
 
-import java.sql.Time;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
 class Introduction {
