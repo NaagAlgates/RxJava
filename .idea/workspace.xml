@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a577486-38d6-423e-bb0b-0103be916742" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/basicoperators/BasicOperators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Introduction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/introduction/Introduction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/basicoperators/BasicOperators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/basicoperators/BasicOperators.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="1027" />
   </component>
   <component name="ProjectId" id="1aHddMMBVsUONUxf1GjuVTjDax1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -95,22 +88,22 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="533" y="178" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1586473531497" />
-    <state width="1398" height="180" key="GridCell.Tab.0.bottom" timestamp="1586556595362">
+    <state width="1398" height="180" key="GridCell.Tab.0.bottom" timestamp="1586566292315">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="180" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1586556595362" />
-    <state width="1398" height="180" key="GridCell.Tab.0.center" timestamp="1586556595361">
+    <state width="1398" height="180" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1586566292315" />
+    <state width="1398" height="180" key="GridCell.Tab.0.center" timestamp="1586566292314">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="180" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1586556595361" />
-    <state width="1398" height="180" key="GridCell.Tab.0.left" timestamp="1586556595360">
+    <state width="1398" height="180" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1586566292314" />
+    <state width="1398" height="180" key="GridCell.Tab.0.left" timestamp="1586566292313">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="180" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1586556595360" />
-    <state width="1398" height="180" key="GridCell.Tab.0.right" timestamp="1586556595361">
+    <state width="1398" height="180" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1586566292313" />
+    <state width="1398" height="180" key="GridCell.Tab.0.right" timestamp="1586566292314">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="180" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1586556595361" />
+    <state width="1398" height="180" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1586566292314" />
     <state x="397" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1586396551855">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
