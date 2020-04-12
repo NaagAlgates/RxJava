@@ -1,10 +1,13 @@
 package basicoperators;
 
 import io.reactivex.Observable;
+import io.reactivex.Single;
+import io.reactivex.disposables.Disposable;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -34,7 +37,14 @@ class BasicOperators {
         //examples.anyExample();
         //examples.containsExample();
         //examples.listExample();
-        examples.sortedList();
+        //examples.sortedList();
+        //examples.toMapExample();
+        //examples.collectExample();
+        //examples.onErrorReturnItemExample();
+        //examples.onErrorReturnExample();
+        //examples.onErrorResumeNextExample();
+        //examples.retryExample();
+        examples.actionOperatorsExample();
     }
 }
 
@@ -166,37 +176,103 @@ class Examples {
 
     //Reducing Operators
 
-    void countExample(){
-        Observable.just("a",4,4.0,3333333,45.00000000001,"def").count().subscribe(System.out::println);
+    void countExample() {
+        Observable.just("a", 4, 4.0, 3333333, 45.00000000001, "def").count().subscribe(System.out::println);
     }
 
-    void reduceExample(){
+    void reduceExample() {
         //Observable.just(12,3,4,5,6,7,8).reduce((a,b)->a+b).subscribe(System.out::println);
-        Observable.just(12,3,4,5,6,7,8).reduce("",(a,b)->a + (a.equals("")?"":",")+b).subscribe(System.out::println);
+        Observable.just(12, 3, 4, 5, 6, 7, 8).reduce("", (a, b) -> a + (a.equals("") ? "" : ",") + b).subscribe(System.out::println);
     }
 
-    void allExample(){
-        Observable.just(1,2,3,4,5,6,7,8).all(i->i<=10).subscribe(System.out::println);
+    void allExample() {
+        Observable.just(1, 2, 3, 4, 5, 6, 7, 8).all(i -> i <= 10).subscribe(System.out::println);
     }
 
-    void anyExample(){
-        Observable.just(1,2,3,4,5,12,7,8).any(i->i>10).subscribe(System.out::println);
+    void anyExample() {
+        Observable.just(1, 2, 3, 4, 5, 12, 7, 8).any(i -> i > 10).subscribe(System.out::println);
     }
 
-    void containsExample(){
-        Observable.range(1,5000).contains(5999).subscribe(System.out::println);
+    void containsExample() {
+        Observable.range(1, 5000).contains(5999).subscribe(System.out::println);
     }
 
     //Collection Operators
 
-    void listExample(){
+    void listExample() {
         //Observable.just("a","b","c","d","e").toList().subscribe(System.out::println);
         //Observable.just("a","b","c","d","e").toList(6).subscribe(System.out::println);
-        Observable.just("a","b","c","d","e").toList(CopyOnWriteArrayList::new).subscribe(System.out::println);
+        Observable.just("a", "b", "c", "d", "e").toList(CopyOnWriteArrayList::new).subscribe(System.out::println);
     }
 
-    void sortedList(){
+    void sortedList() {
         //Observable.just(1,6,8,3,5,6).toSortedList().subscribe(System.out::println);
-        Observable.just(1,6,8,3,5,6).distinct().toSortedList().subscribe(System.out::println);
+        Observable.just(1, 6, 8, 3, 5, 6).distinct().toSortedList().subscribe(System.out::println);
+    }
+
+    void toMapExample() {
+        Observable<String> stringObservable = Observable.just("a", "bb", "c", "c", "c", "bb");
+        stringObservable.sorted().toMap(s -> s, String::length).subscribe(System.out::println);
+        stringObservable.sorted().toMultimap(s -> s, String::length).subscribe(System.out::println);
+    }
+
+    void collectExample() {
+        Observable.just("Alpha", "Beta", "Beta", "Delta", "Epsilon")
+                .collect(HashSet::new, HashSet::add)
+                .subscribe(s -> System.out.println("Received: " + s));
+    }
+
+    //Error Recover Operators
+    void onErrorReturnItemExample() {
+        Observable<Integer> integerObservable = Observable.just(10, 20, 0, 90, 45, 2);
+        integerObservable
+                .map(i -> 10 / i)
+                .onErrorReturnItem(-1)
+                .subscribe(System.out::println,e->System.out.println("Error Received: "+e.getMessage()));
+    }
+
+    void onErrorReturnExample() {
+        Single.just("2A")
+                .map(v -> Integer.parseInt(v, 10))
+                .onErrorReturn(error -> {
+                    if (error instanceof NumberFormatException) return 0;
+                    else throw new IllegalArgumentException();
+                })
+                .subscribe(
+                        System.out::println,
+                        error -> System.err.println("onError should not be printed!"));
+    }
+
+    void onErrorResumeNextExample(){
+        Observable<Integer> numbers = Observable.generate(() -> 1, (state, emitter) -> {
+            emitter.onNext(state);
+
+            return state + 1;
+        });
+        numbers.scan((a,b)->Math.multiplyExact(a, b))
+                .onErrorResumeNext(Observable.empty())
+                .subscribe(
+                        System.out::println,
+                        error -> System.err.println("onError should not be printed!"));
+    }
+
+    void retryExample(){
+        Observable.just(2,5,9,0,10,20)
+                .map(i->10/i)
+                .retry(1)
+                .subscribe(System.out::println,e->System.out.println("Error Received: "+e.getMessage()));
+    }
+
+    //Action Operators
+    void actionOperatorsExample(){
+        Observable.just(1,2,3,0,5,6,7,8)
+                .scan((a,b)->10/b)
+                .doOnSubscribe(s->System.out.println("doOnSubscribe: "))
+                .doOnNext(s->System.out.println("doOnNext: "+s))
+                .doAfterNext(s->System.out.println("doAfterNext: "+s))
+                .doOnComplete(()->System.out.println("doOnComplete: "))
+                .doOnError(e->System.out.println("doOnError"))
+                .doOnDispose(()->System.out.println("doOnDispose: "))
+                .subscribe(System.out::println,e->System.out.println(e.getMessage()),()->System.out.println("Completed"));
     }
 }

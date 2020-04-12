@@ -67,6 +67,9 @@ This repo consists of Examples for
 * doOnSubscribe() and doOnDispose()
 * doOnSuccess()
 
+## References
+* Book - https://www.amazon.com.au/Learning-RxJava-Concurrent-responsive-applications-ebook/dp/B01N1UNBME/ref=sr_1_8?keywords=rxjava&qid=1586596223&sr=8-8
+
 ## Contributors
 
 * [Nagaraj Alagusundaram](https://iamnagaraj.com)
