@@ -77,6 +77,12 @@ This repo consists of Examples for
 * withLatestFrom()
 * groupBy()
 
+## Multicasting
+* ConnectablesObservables()
+* Multicasting with operator
+* autoConnect()
+* refCount() & share()
+
 ## References
 * Book - https://www.amazon.com.au/Learning-RxJava-Concurrent-responsive-applications-ebook/dp/B01N1UNBME/ref=sr_1_8?keywords=rxjava&qid=1586596223&sr=8-8
 
