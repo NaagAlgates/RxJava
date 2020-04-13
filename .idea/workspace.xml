@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a577486-38d6-423e-bb0b-0103be916742" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileContent/fileContent.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/combiningobservables/CombiningObservables.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
@@ -10,8 +10,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Launcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/basicoperators/BasicOperators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/basicoperators/BasicOperators.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,13 +47,26 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager" selected="Application.BasicOperators">
+  <component name="RunManager" selected="Application.CombiningObservables">
     <configuration name="BasicOperators" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="basicoperators.BasicOperators" />
       <module name="rxjava_main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="basicoperators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CombiningObservables" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="combiningobservables.CombiningObservables" />
+      <module name="rxjava_main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="combiningobservables.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,6 +83,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CombiningObservables" />
         <item itemvalue="Application.BasicOperators" />
         <item itemvalue="Application.Introduction" />
       </list>
@@ -99,26 +111,26 @@
       <screen x="-2560" y="23" width="2560" height="1057" />
     </state>
     <state x="-2165" y="294" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027/-2560.23.2560.1057@-2560.23.2560.1057" timestamp="1586681582363" />
-    <state width="1373" height="262" key="GridCell.Tab.0.bottom" timestamp="1586733692670">
+    <state width="1373" height="262" key="GridCell.Tab.0.bottom" timestamp="1586744035166">
       <screen x="-2560" y="23" width="2560" height="1057" />
     </state>
     <state width="1398" height="180" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1586566292315" />
-    <state width="1373" height="262" key="GridCell.Tab.0.bottom/0.23.1680.1027/-2560.23.2560.1057@-2560.23.2560.1057" timestamp="1586733692670" />
-    <state width="1373" height="262" key="GridCell.Tab.0.center" timestamp="1586733692669">
+    <state width="1373" height="262" key="GridCell.Tab.0.bottom/0.23.1680.1027/-2560.23.2560.1057@-2560.23.2560.1057" timestamp="1586744035166" />
+    <state width="1373" height="262" key="GridCell.Tab.0.center" timestamp="1586744035165">
       <screen x="-2560" y="23" width="2560" height="1057" />
     </state>
     <state width="1398" height="180" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1586566292314" />
-    <state width="1373" height="262" key="GridCell.Tab.0.center/0.23.1680.1027/-2560.23.2560.1057@-2560.23.2560.1057" timestamp="1586733692669" />
-    <state width="1373" height="262" key="GridCell.Tab.0.left" timestamp="1586733692668">
+    <state width="1373" height="262" key="GridCell.Tab.0.center/0.23.1680.1027/-2560.23.2560.1057@-2560.23.2560.1057" timestamp="1586744035165" />
+    <state width="1373" height="262" key="GridCell.Tab.0.left" timestamp="1586744035165">
       <screen x="-2560" y="23" width="2560" height="1057" />
     </state>
     <state width="1398" height="180" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1586566292313" />
-    <state width="1373" height="262" key="GridCell.Tab.0.left/0.23.1680.1027/-2560.23.2560.1057@-2560.23.2560.1057" timestamp="1586733692668" />
-    <state width="1373" height="262" key="GridCell.Tab.0.right" timestamp="1586733692669">
+    <state width="1373" height="262" key="GridCell.Tab.0.left/0.23.1680.1027/-2560.23.2560.1057@-2560.23.2560.1057" timestamp="1586744035165" />
+    <state width="1373" height="262" key="GridCell.Tab.0.right" timestamp="1586744035166">
       <screen x="-2560" y="23" width="2560" height="1057" />
     </state>
     <state width="1398" height="180" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1586566292314" />
-    <state width="1373" height="262" key="GridCell.Tab.0.right/0.23.1680.1027/-2560.23.2560.1057@-2560.23.2560.1057" timestamp="1586733692669" />
+    <state width="1373" height="262" key="GridCell.Tab.0.right/0.23.1680.1027/-2560.23.2560.1057@-2560.23.2560.1057" timestamp="1586744035166" />
     <state x="-2365" y="133" key="SettingsEditor" timestamp="1586594914445">
       <screen x="-2560" y="23" width="2560" height="1057" />
     </state>
@@ -140,6 +152,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/basicoperators/BasicOperators.java</url>
           <line>249</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/combiningobservables/CombiningObservables.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
